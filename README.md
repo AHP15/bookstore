@@ -73,7 +73,7 @@ The Bookstore is a website built with react.js and redux.js it that allows you t
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live demo](https://math-magicians-one.vercel.app/)
+- Not yet
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -125,10 +125,10 @@ To run tests, run the following command:
 
 <!-- AUTHORS -->
 
-## 👥 Authors <a name="authors"></a>
+## 👥 Author <a name="authors"></a>
 
 
-👤 **Author1**
+👤 **Author**
 
 * GitHub: [@Abdessittir](https://github.com/Abdessittir)
 * Twitter: [@AbdessittirHar1](https://twitter.com/AbdessittirHar1)
