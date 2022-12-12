@@ -1,8 +1,8 @@
 // action types
-const STATUS = 'status';
-const LOAD_CATEGORIES = 'load-categories';
-const ADD_CATEGORY = 'add-category';
-const REMOVE_CATEGORY = 'remove-category';
+const STATUS = 'bookstore/categories/STATUS';
+const LOAD_CATEGORIES = 'bookstore/categories/LOAD_CATEGORIES';
+const ADD_CATEGORY = 'bookstore/categories/ADD_CATEGORY';
+const REMOVE_CATEGORY = 'bookstore/categories/REMOVE_CATEGORY';
 
 // actions
 export const loadCategories = () => ({ type: LOAD_CATEGORIES });

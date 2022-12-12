@@ -149,13 +149,13 @@ To run tests, run the following command:
 ## Contributing
 
 Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues page](./issues).
+Feel free to check the [issues page](https://github.com/Abdessittir/bookstore/issues).
 
 ## Show your support
 Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](https://github.com/Abdessittir/bookstore/blob/dev/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

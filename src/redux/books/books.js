@@ -1,7 +1,7 @@
 // action types
-const LOAD_BOOKS = 'load';
-const ADD_BOOK = 'add-book';
-const REMOVE_BOOK = 'remove-book';
+const LOAD_BOOKS = 'bookstore/books/LOAD_BOOKS';
+const ADD_BOOK = 'bookstore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
 // actions
 export const loadBooks = () => ({ type: LOAD_BOOKS });
