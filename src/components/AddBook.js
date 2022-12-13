@@ -1,18 +1,40 @@
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+
+import { addBook } from '../redux/books/books';
+
 const AddBook = () => {
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+
+  const dispatch = useDispatch();
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!title.trim() || !author.trim()) return;
+
+    dispatch(addBook({ title, author }));
+
+    setTitle('');
+    setAuthor('');
   };
+
   return (
     <form onSubmit={handleSubmit}>
       <input
         name="title"
         type="text"
         placeholder="book title"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
       />
       <input
         name="author"
         type="text"
         placeholder="author name"
+        value={author}
+        onChange={(e) => setAuthor(e.target.value)}
       />
       <button type="submit">Add Book</button>
     </form>

@@ -1,18 +1,19 @@
+import { useSelector, shallowEqual } from 'react-redux';
 import NavBar from './NavBar';
 import Book from './Book';
 import AddBook from './AddBook';
 
-const BookList = () => (
-  <div>
-    <NavBar />
+const BookList = () => {
+  const books = useSelector((state) => state.bookReducer.books, shallowEqual);
+  return (
     <div>
-      <Book title="book 1" author="author 1" />
-      <Book title="book 1" author="author 1" />
-      <Book title="book 1" author="author 1" />
-      <Book title="book 1" author="author 1" />
+      <NavBar />
+      <div>
+        {books.map(({ title, author }) => (<Book key={title} title={title} author={author} />))}
+      </div>
+      <AddBook />
     </div>
-    <AddBook />
-  </div>
-);
+  );
+};
 
 export default BookList;

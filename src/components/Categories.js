@@ -1,11 +1,18 @@
-import NavBar from './NavBar';
+import { useDispatch } from 'react-redux';
 
-const Categories = () => (
-  <div>
-    <NavBar />
+import NavBar from './NavBar';
+import { checkStatus } from '../redux/categories/categories';
+
+const Categories = () => {
+  const dispatch = useDispatch();
+
+  return (
     <div>
-      <button type="button">Check status</button>
+      <NavBar />
+      <div>
+        <button type="button" onClick={() => dispatch(checkStatus())}>Check status</button>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 export default Categories;
