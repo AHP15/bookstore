@@ -1,4 +1,5 @@
 import { useSelector, shallowEqual } from 'react-redux';
+
 import NavBar from './NavBar';
 import Book from './Book';
 import AddBook from './AddBook';
@@ -9,7 +10,9 @@ const BookList = () => {
     <div>
       <NavBar />
       <div>
-        {books.map(({ title, author }) => (<Book key={title} title={title} author={author} />))}
+        {books.map(({ id, title, author }) => (
+          <Book key={id} id={id} title={title} author={author} />
+        ))}
       </div>
       <AddBook />
     </div>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 
 import { addBook } from '../redux/books/books';
 
@@ -14,7 +15,7 @@ const AddBook = () => {
 
     if (!title.trim() || !author.trim()) return;
 
-    dispatch(addBook({ title, author }));
+    dispatch(addBook({ id: uuidv4(), title, author }));
 
     setTitle('');
     setAuthor('');
