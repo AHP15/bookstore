@@ -46,6 +46,8 @@
   font-size: 17px;
   /* stylelint-disable-next-line color-hex-case */
   color: #339AF0;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 .book_progress {
