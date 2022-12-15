@@ -120,7 +120,7 @@ export default function reducer(state = intialState, action) {
         adding: false,
         selected: null,
         books: state.books,
-      }
+      };
     default:
       return state;
   }
