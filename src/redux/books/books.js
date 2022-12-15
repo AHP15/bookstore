@@ -11,6 +11,8 @@ const REQUEST_REMOVE_BOOK = 'bookstore/books/REQUEST_REMOVE_BOOK';
 const REQUEST_REMOVE_BOOK_SUCCEED = 'bookstore/books/REQUEST_REMOVE_BOOK_SUCCEED';
 const REQUEST_REMOVE_BOOK_FAIL = 'bookstore/books/REQUEST_REMOVE_BOOK_FAIL';
 
+const CLEAR_ERROR = 'bookstore/books/CLEAR_ERROR';
+
 // actions
 export const getBooks = () => ({ type: REQUEST_BOOKS });
 export const setBooks = (books) => ({ type: REQUEST_BOOKS_SUCCEED, books });
@@ -23,6 +25,8 @@ export const addBookError = (error) => ({ type: REQUEST_ADD_BOOK_FAIL, error });
 export const reqRemoveBook = (id) => ({ type: REQUEST_REMOVE_BOOK, id });
 export const removeBook = (id) => ({ type: REQUEST_REMOVE_BOOK_SUCCEED, id });
 export const removeBookError = (error) => ({ type: REQUEST_REMOVE_BOOK_FAIL, error });
+
+export const clearError = () => ({ type: CLEAR_ERROR });
 
 // reducer
 const intialState = {
@@ -109,6 +113,14 @@ export default function reducer(state = intialState, action) {
         selected: null,
         books: state.books,
       };
+    case CLEAR_ERROR:
+      return {
+        load: false,
+        error: null,
+        adding: false,
+        selected: null,
+        books: state.books,
+      }
     default:
       return state;
   }
